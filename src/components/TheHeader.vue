@@ -50,7 +50,6 @@ export default {
     display: flex;
     justify-content: space-between;
     color: #fff;
-    font-size: 20px;
     font-weight: 500;
 }
 
