@@ -1,30 +1,43 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="page">
+    <the-header></the-header>
+    <main class="main">
+      <div class="container">
+        <router-view></router-view>
+      </div>
+    </main>
+    <the-footer></the-footer>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
+<script>
+import TheHeader from './components/TheHeader.vue';
+import TheFooter from './components/TheFooter.vue'
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+export default {
+  components: {
+    TheHeader,
+    TheFooter
+  }
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+</script>
+<style>
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1230px;
+  /* width: 100%; */
+}
+
+.title {
+  margin: 10px 0 30px;
+  /* font-family: sans-serif; */
+  letter-spacing: 1px;
+  font-size: 25px;
 }
 </style>
