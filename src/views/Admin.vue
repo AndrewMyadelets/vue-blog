@@ -89,7 +89,7 @@ export default {
             return this.posts.findIndex(item => item.id === id);
         },
         editPost(id) {
-            this.setSelectedPost(Object.assign({}, this.posts[this.getPostIndexById(id)]));
+            this.setSelectedPost(Object.assign({}, this.getPostById(id)));
 
             this.showDialog();
         },
@@ -97,7 +97,7 @@ export default {
             this.deletePost(this.getPostIndexById(id));
         },
         showPost(id) {
-            this.setSelectedPost(Object.assign({}, this.posts[this.getPostIndexById(id)]));
+            this.setSelectedPost(Object.assign({}, this.getPostById(id)));
 
             this.readOnlyPost = true;
             this.showDialog();
@@ -143,6 +143,7 @@ export default {
         ...mapGetters({
             sortedAndSearchedPosts: 'post/sortedAndSearchedPosts',
             totalPosts: 'post/totalPosts',
+            getPostById: 'post/getPostById',
         }),
         postsToShow() {
             return this.sortedAndSearchedPosts.slice(

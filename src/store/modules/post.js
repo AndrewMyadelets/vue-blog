@@ -43,6 +43,9 @@ export default {
         totalPosts(state, getters) {
             return getters.sortedAndSearchedPosts.length;
         },
+        getPostById: (state) => (id) =>  {
+            return state.posts.find(post => post.id === id);
+        },
     },
     mutations: {
         addPosts(state, posts) {

@@ -1,6 +1,6 @@
 <template>
     <h3 class="post__title">{{ post.title }}</h3>
-    <p class="post__descr">{{ post.body }}</p>
+    <p class="post__descr">{{ getTextPreview(post.body) }}</p>
     <div class="post__continue" @click="$router.push(`/posts/${post.id}`)">
         <span>Continue reading</span>
         <img src="../assets/images/continue.png" alt="">
@@ -13,7 +13,12 @@ export default {
             type: Object,
             required: true,
         }
-    }
+    },
+    methods: {
+        getTextPreview(text) {
+            return (text.length > 300) ? text.substring(0, 300) + '...' : text;
+        }
+    },
 }
 </script>
 <style scoped>
