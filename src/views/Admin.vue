@@ -11,7 +11,7 @@
         />
     </u-dialog>
     <div class="post-grid">
-        <h1 class="post-grid__title">Post management</h1>
+        <h1 class="title post-grid__title">Post management</h1>
         <div class="post-grid__actions">
             <u-button-primary
                 class="post-grid__action"
@@ -168,10 +168,7 @@ export default {
 }
 
 .post-grid__title {
-    margin: 10px 15px 30px 0;
-    font-family: sans-serif;
-    letter-spacing: 1px;
-    font-size: 25px;
+    margin: 0 15px 30px 0;
 }
 
 .post-grid__action {

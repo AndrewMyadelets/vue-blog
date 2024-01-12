@@ -27,17 +27,7 @@ export default {
   min-height: 100%;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1230px;
-  /* width: 100%; */
-}
-
-.title {
-  margin: 10px 0 30px;
-  /* font-family: sans-serif; */
-  letter-spacing: 1px;
-  font-size: 25px;
+.main {
+    padding: 50px 0;
 }
 </style>
