@@ -12,9 +12,6 @@ export default {
 .button-primary {
     padding: 0 10px;
     height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-wrap: nowrap;
     border: none;
     border-radius: 5px;

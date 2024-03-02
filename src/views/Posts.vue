@@ -10,13 +10,13 @@
                 class="posts__action"
                 #placeholder
                 :options="sortOptions"
-                :model-value="selectedSort"
+                v-model="selectedSort"
                 @update:model-value="setSelectedSort"
             >Filter by</u-select>
             <u-input
                 class="posts__search"
                 placeholder="Search..."
-                :model-value="searchQuery"
+                v-model="searchQuery"
                 @update:model-value="setSearchQuery"
             />
         </div>
@@ -60,6 +60,8 @@ export default {
     },
     mounted() {
         document.title = 'Posts';
+        this.setSearchQuery('');
+        this.setSelectedSort('');
     },
     computed: {
         ...mapState({

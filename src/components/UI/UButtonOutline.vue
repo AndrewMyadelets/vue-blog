@@ -12,9 +12,6 @@ export default {
 .button-outline {
     padding: 0 10px;
     height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-wrap: nowrap;
     border: 1px solid #0071f0;
     border-radius: 5px;

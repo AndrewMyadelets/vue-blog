@@ -40,9 +40,6 @@ export default {
 .select {
     padding: 0 10px;
     height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #fff;
     border: 1px solid #c1c7ce;
     border-radius: 5px;

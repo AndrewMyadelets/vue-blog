@@ -25,13 +25,13 @@
                 class="post-grid__action"
                 #placeholder
                 :options="sortOptions"
-                :model-value="selectedSort"
+                v-model="selectedSort"
                 @update:model-value="setSelectedSort"
             >Filter</u-select>
             <u-input
                 class="post-grid__search"
                 placeholder="Search..."
-                :model-value="searchQuery"
+                v-model="searchQuery"
                 @update:model-value="setSearchQuery"
             />
         </div>
@@ -131,6 +131,10 @@ export default {
         changePage(page) {
             this.currentPage = page;
         }
+    },
+    mounted() {
+        this.setSearchQuery('');
+        this.setSelectedSort('');
     },
     computed: {
         ...mapState({
